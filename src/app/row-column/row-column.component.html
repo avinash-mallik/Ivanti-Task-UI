@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-body">
+    <div class="center">
+
+       Enter Coordinates
+
+      <form action="">
+        <label for="first" >Vertex 1</label>
+        <input id="first" name="first" type="text" placeholder="x1,y1" [(ngModel)] = "inputs[0]">
+
+        <label for="second">Vertex 2</label>
+        <input id="second" name="second" type="text" placeholder="x2,y2" [(ngModel)] = "inputs[1]">
+
+        <label for="third">Vertex 3</label>
+        <input id="third" name="third" type="text" placeholder="x3,y3" [(ngModel)] = "inputs[2]">
+
+      </form>
+      <button type="button" class="roundBorder" (click)="GetRowAndColumn()">Get Row and Column</button>
+      <div [ngStyle]="{'visibility':rowColumn==='' ? 'hidden' : 'visible' }" >
+        {{rowColumn}}<br>
+      </div>
+    </div>
+  </div>
+</div>
